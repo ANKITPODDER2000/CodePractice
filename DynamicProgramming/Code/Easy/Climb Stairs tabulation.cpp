@@ -22,6 +22,7 @@ public:
         for(int i = 2; i <= n; i++) dp[i] = dp[i-1] + dp[i-2];
         return dp[n];
     }
+
     lli climbStairs3(lli n) {
         lli val1 = 1, val2 = 1;
         for(lli i = 2; i <= n; i++) {
@@ -36,7 +37,7 @@ public:
 int main() {
     // Write C++ code here
     Solution *s = new Solution();
-    cout << s->climbStairs1(10000) << endl;  // tc : O(n) | sc O(n) | Auxiliary Space : O(n) -> Stack Space.. 
+    cout << s->climbStairs1(10000) << endl; // tc : O(n) | sc O(n) | Auxiliary Space : O(n) -> Stack Space.. 
     cout << s->climbStairs2(10000) << endl; // tc : O(n) | sc O(n)
     cout << s->climbStairs3(10000) << endl; // Best optimal solution Tc O(n) | sc : O(1)
     return 0;
